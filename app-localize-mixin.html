@@ -8,7 +8,6 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-ajax/iron-ajax.html">
 <script src="../intl-messageformat/dist/intl-messageformat.min.js"></script>
 
@@ -96,7 +95,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     ajax: null     /* Global iron-ajax object used to request resource files. */
   }
 
-  Polymer.AppLocalizeBehavior = subclass => class extends subclass {
+  window.AppLocalizeMixin = subclass => class extends subclass {
 
     static get config() {
       /**
